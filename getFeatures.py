@@ -60,6 +60,7 @@ def clean_problem(problem):
     return new_problem.strip()
 
 def get_problem_ratio(sol_ls, problem_ls, answer_ls):
+    
     if not sol_ls:
         return 0.0
     
@@ -154,6 +155,7 @@ def check_for_answer(string, answer):
     
     string_lower = string.lower()
     answer_lower = answer.lower()
+
     answer_in_string = any(
         ans == answer_lower or ans == answer_lower.replace('-', '') or ans == answer_lower.replace('.', '')
         for ans in re.split(r'[\s+\-*/]', string_lower)
